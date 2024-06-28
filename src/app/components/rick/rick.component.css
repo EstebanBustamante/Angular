@@ -1,0 +1,139 @@
+/* Importar fuentes personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* Fondo de la página */
+:host {
+  display: block;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Karla', sans-serif;
+  color: #fff;
+  background-size: cover;
+}
+
+/* Título de la Lista */
+h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #fff;
+  font-family: 'Patrick Hand', cursive;
+}
+
+/* Contenedor del Formulario */
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  backdrop-filter: blur(10px);
+}
+
+/* Input de Búsqueda */
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+input[type="text"]::placeholder {
+  color: #a5d6a7;
+}
+
+/* Botones */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 150px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'Patrick Hand', cursive;
+}
+
+button:hover {
+  background-color: #4caf50;
+  color:#000000;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+button:not(:last-child) {
+  margin-right: 5px;
+}
+
+/* Lista de Personajes */
+div .lista-personajes {
+  width: 100%;
+  max-width: 600px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+.lista-personajes h3 {
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #888;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  text-align:center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.lista-personajes h3:hover {
+  background-color: #4caf50;
+  color: rgb(0, 0, 0);
+  transform: scale(1.05);
+}
+/* Estilo para las imágenes de los personajes */
+.personaje-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 15%;
+  transition: transform 0.3s;
+}
+/* Efectos de hover para los elementos */
+.personaje-item:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+.personaje-item img:hover {
+  transform: scale(1.1);
+}
+/* Responsive */
+@media (max-width: 600px) {
+  input[type="text"], button {
+    width: 100%;
+    max-width: none;
+  }
+
+  .lista-personajes {
+    max-width: none;
+  }
+}
+

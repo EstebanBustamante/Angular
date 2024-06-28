@@ -1,0 +1,23 @@
+<div>
+  <input
+    type="text"
+    placeholder="Buscar personaje por nombre"
+    (input)="buscarPorNombre($event)" />
+
+  <button (click)="buscoPersonajes()">Ver Personajes</button>
+
+  <button (click)="ordenarAlfabeticamente()">Ordenar Alfabéticamente</button>
+</div>
+
+<div>
+  <button (click)="irA(prevPage)" *ngIf="prevPage">Previous</button>
+  <button (click)="irA(nextPage)" *ngIf="nextPage">Next</button>
+</div>
+
+<div class="lista-personajes">
+  <div *ngFor="let personaje of listaPersonajes" class="personaje-item">
+    <img [src]="personaje.image" [alt]="personaje.name" />
+    <h3>{{ personaje.name }}</h3>
+  </div>
+</div>
+
